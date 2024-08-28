@@ -1,0 +1,36 @@
+Formas de embeber CSS en HTML
+	--> Estilo en linea
+	<p style='color: red;font-family:courier;'>este es el parrafo</p>
+
+	--> Estilo en bloque (se coloca en el <head></head>)
+	<style>
+		/* Aqui van las reglas de estilo */
+	</style>
+
+	--> Enlace a hoja de estilos externa (archivo.css)
+	<link>
+	----------------------------------------------------------
+
+	Selectores de CSS: permiten decidir a que etiquetas afectar con reglas de estilos.
+		--> de etiqueta: afecta a todas las etiquetas del mismo tipo con las mismas reglas de estilos.(Ej.: alineacion justificada para todos los parrafos) 
+
+		--> de id: afecta a una unica etiqueta con estilos.
+
+		--> de clase: afecta a etiquetas de diferente tipo con las mismas reglas de estilos.(Ej.: h2 y p tengan el mismo subrayado) 
+
+		-------------------------------------------------
+
+		#ff0000 ->  #f00 -> rojo (red)			-> rgb(255,0,0)
+		#00ff00 ->  #0f0 -> verde (green)		-> rgb(0,255,0)
+		#0000ff ->  #00f -> azul (blue) 		-> rgb(0,0,255)
+		#ffffff ->  #fff -> blanco (white)		-> rgb(255,255,255)
+		#000000 ->  #000 -> negro (black) 		-> rgb(255,255,255)
+		#ffff00 ->  #ff0 -> amarillo (yellow)	-> rgb(255,255,0)
+
+
+		---------------------------------------------------
+
+	El estilo en linea prevalece sobre el estilo en bloque
+	El estilo en bloque prevalece sobre la hoja de estilos externa
+
+
