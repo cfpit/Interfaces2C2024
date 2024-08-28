@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina Web</title>
+    <link rel="stylesheet" href="estilos.css">
+    <style>
+        /* Estilo en bloque */
+        
+        /* Selector de etiqueta */
+        body{
+            background-color: antiquewhite;
+            /* background-color: #edc9af; */
+            /* background-color: rgb(255,255,0); */
+        }
+
+        p{
+            text-align: justify;
+        }
+
+        /* Selector de id */
+        #tituloPpal{
+            /* 1rem = 16px */
+            font-size: 3rem;
+            color: aqua;
+        }
+
+        /* Selector de clase */
+        .subrayado{
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+    <h1  class="subrayado" id="tituloPpal" style="color:blueviolet;font-family:'Courier New', Courier, monospace;">Este es el titulo</h1>
+
+    <br><hr>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti ab quos modi doloribus illo est incidunt, velit architecto? Quam unde architecto accusantium doloremque est eum modi non iusto nulla tempore. Lorem ipsum dolor, <span class="subrayado">sit amet consectetur adipisicing elit. Sit eaque maiores</span>  ex minima voluptate laborum, repellendus nemo eveniet dignissimos optio temporibus nesciunt est possimus ullam mollitia provident. Neque, facilis alias.  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora aliquam et, quia, labore est quae rerum nihil aliquid obcaecati corrupti perspiciatis perferendis delectus officiis quam corporis! Inventore in sequi quia?</p>
+
+<br><hr><br>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th colspan="4">Celda 1</th>
+            <!-- <th>Celda 2</th>
+            <th>Celda 3</th>
+            <th>Celda 4</th> -->
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan="2">Celda 5</td>
+            <td>Celda 6</td>
+            <td>Celda 7</td>
+            <td>Celda 8</td>
+        </tr>
+        <tr>
+            <!-- <td>Celda 9</td> -->
+            <td>Celda 10</td>
+            <td>Celda 11</td>
+            <td>Celda 12</td>
+        </tr>
+        <tr>
+            <td>Celda 13</td>
+            <td>Celda 14</td>
+            <td>Celda 15</td>
+            <td>Celda 16</td>
+        </tr>
+    </tbody>
+</table>
+
+
+<br><hr><br>
+
+<h2>Lista Desordenada</h2>
+<h3>Paises</h3>
+
+<!-- <ul type="square"> -->
+<ul type="circle">
+    <li>Argentina</li>
+    <li>Brasil</li>
+    <li>Uruguay</li>
+</ul>
+
+<h2>Lista Ordenada</h2>
+<h3>Lenguajes</h3>
+
+<ol type="A">
+    <li>Java</li>
+    <li>HTML</li>
+    <li>Python</li>
+</ol>
+
+<br><hr>
+
+<h2 id="formu">Formulario</h2>
+
+<form action="otraPagina.html">
+    <table>
+        <tr>
+            <td>Usuario</td>
+            <td><input type="text" name="user" id="user" maxlength="8" required></td>
+        </tr>
+        <tr>
+            <td>Clave</td>
+            <td><input type="password" name="psw" id="psw"></td>
+        </tr>
+        <tr>
+            <td>Edad</td>
+            <td><input type="number" min="18" max="65" value="30"></td>
+        </tr>
+        <tr>
+            <td>Fecha de Nacimiento</td>
+            <td><input type="date"></td>
+        </tr>
+        <tr>
+            <td>Pais</td>
+            <td>
+                <select name="paises" id="paises">
+                    <option value="">Seleccione</option>
+                    <option value="arg">Argentina</option>
+                    <option value="bra">Brasil</option>
+                    <option value="uru">Uruguay</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Formas de Pago</td>
+            <td>
+                <input type="radio" name="pago" id="efectivo">
+                <label for="efectivo">Efectivo</label>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input type="radio" name="pago" id="tarjeta">
+                <label for="tarjeta">Tarjeta</label>
+            </td>
+        </tr>
+        <tr>
+            <td>Temas de Interes</td>
+            <td>
+                <input type="checkbox" name="temas" id="musica">
+                <label for="musica">Musica</label>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input type="checkbox" name="temas" id="viajes">
+                <label for="viajes">Viajes</label>
+            </td>
+        </tr>
+        <tr>
+            <td valign = "top">Comentarios</td>
+            <td><textarea name="comentarios" id="comentarios" cols="30" rows="5" placeholder="Escriba Aqui su comentario"></textarea></td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <input type="reset" value="Cancelar Envio">
+                <input type="submit" value="Enviar Datos">
+            </td>
+        </tr>
+    </table>
+</form>
+
+
+<br><hr><br>
+
+<h2>Imagenes</h2>
+<img src="imagenes/paisaje.jpg" alt="bonito paisaje" width="40%">
+
+<br><hr><br>
+
+<h2>Enlaces</h2>
+<!-- vinculo absoluto -->
+<a href="https://www.google.ar" target="_blank">Ir a Google</a>
+<br>
+<!-- vinculo relativo -->
+<a href="otraPagina.html" target="_blank">Ir a Otra Pagina de mi Sitio</a>
+<br>
+<!-- Anclaje al comienzo de la pagina -->
+ <a href="#">Ir al Comienzo de la Pagina</a>
+<br>
+ <!-- Anclaje al comienzo del formulario -->
+ <a href="#formu">Ir al Comienzo del Formulario</a>
+<br>
+<!-- vinculo absoluto con imagenes -->
+<a href="https://www.mercadolibre.com.ar" target="_blank">
+    <label for="ml">Ir a Mercado Libre</label>
+    <br>
+    <img src="imagenes/ml.jpg" alt="Mercado Libre">
+</a>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+</body>
+</html>
