@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Sizing</title>
+    <style>
+        .caja1{
+            width: 300px;
+            height: 200px;
+            background-color: bisque;
+            margin: auto;/*centrado del contenido respecto del contenedor*/
+        }
+        .caja2{
+            width: 300px;
+            height: 200px;
+            background-color: aquamarine;
+            margin: auto;/*centrado del contenido respecto del contenedor*/
+            border: 5px red solid;
+            padding: 10px;
+            box-sizing: content-box;/*ancho total = contenido + padding + borde*/
+        }
+        
+        .caja3{
+            width: 300px;
+            height: 200px;
+            background-color: tomato;
+            color: white;
+            margin: auto;/*centrado del contenido respecto del contenedor*/
+            border: 5px red solid;
+            padding: 10px;
+            box-sizing: border-box;/*ancho total = width*/
+        }
+    </style>
+</head>
+<body>
+    <div class="caja1">Caja 1</div>
+    <div class="caja2">Caja 2</div>
+    <div class="caja3">Caja 3</div>
+</body>
+</html>

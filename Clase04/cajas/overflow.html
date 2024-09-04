@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Sizing</title>
+    <style>
+        .caja1{
+            width: 300px;
+            height: 200px;
+            padding: 5px;
+            background-color: bisque;
+            margin: auto;
+            margin-bottom: 100px;
+        }
+        .caja2{
+            width: 300px;
+            height: 200px;
+            padding: 5px;
+            background-color: aquamarine;
+            margin: auto;
+            margin-bottom: 100px;
+            overflow: auto;/*si el contenido desborda -> aparece el scroll*/
+        }
+        
+        .caja3{
+            width: 300px;
+            height: 200px;
+            background-color: tomato;
+            color: white;
+            margin: auto;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="caja1">
+        <h2>Titulo de la Caja 1</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex excepturi earum voluptates non neque possimus maxime sapiente architecto explicabo repellendus officiis a nemo alias asperiores, assumenda, enim ipsa necessitatibus in iure consectetur iste culpa quis minus cum! Veniam ut, libero exercitationem delectus, illum, nobis omnis suscipit reiciendis eveniet natus odit.</p>
+    </div>
+    <div class="caja2">
+        <h2>Titulo de la Caja 2</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex excepturi earum voluptates non neque possimus maxime sapiente architecto explicabo repellendus officiis a nemo alias asperiores, assumenda, enim ipsa necessitatibus in iure consectetur iste culpa quis minus cum! Veniam ut, libero exercitationem delectus, illum, nobis omnis suscipit reiciendis eveniet natus odit.</p>
+    </div>
+    <div class="caja3">
+        <h2>Titulo de la Caja 3</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex excepturi earum voluptates non neque possimus maxime sapiente architecto explicabo repellendus officiis a nemo alias asperiores, assumenda, enim ipsa necessitatibus in iure consectetur iste culpa quis minus cum! Veniam ut, libero exercitationem delectus, illum, nobis omnis suscipit reiciendis eveniet natus odit.</p>
+    </div>
+</body>
+</html>
