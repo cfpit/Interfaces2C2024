@@ -1,0 +1,55 @@
+header{
+    width: 80vw;
+    background-color: antiquewhite;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bolder;
+    margin: auto;
+    height: 20vh;
+    line-height: 20vh;
+}
+
+nav{
+    width: 80vw;
+    background-color: coral;
+    text-align: center;
+    margin: auto;
+    color: white;
+    height: 15vh;
+    line-height: 15vh;
+}
+
+main{
+    width: 80vw;
+    margin: auto;
+}
+
+#seccion1{
+    width: 75%;
+    background-color:cadetblue;
+    text-align: center;
+    color: white;
+    float: left;
+    height: 55vh;
+    line-height: 55vh;
+}
+
+#seccion2{
+    width: 25%;
+    background-color:deeppink;
+    text-align: center;
+    color: white;
+    float: left;
+    height: 55vh;
+    line-height: 55vh;
+}
+
+footer{
+    width: 80vw;
+    background-color: thistle;
+    text-align: center;
+    margin: auto;
+    height: 10vh;
+    line-height: 10vh;
+    clear: both;
+}
