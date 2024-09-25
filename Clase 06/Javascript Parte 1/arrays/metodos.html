@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>toString()</h3>
+
+    <p> El método toString () devuelve una array como una cadena separada por 
+        comas: </p>
+
+    <p id="demo"></p>
+
+    <script>
+        var frutas = ["Banana", "Naranja", "Manzana", "Uva"];
+        document.getElementById("demo").innerHTML = frutas.toString();
+    </script>
+
+    <h3>join()</h3>
+
+    <p> El método join () une todos los elementos de la matriz en una cadena.</p>
+
+    <p id="demo2"></p>
+
+    <script>
+        var frutas = ["Banana", "Naranja", "Manzana", "Uva"];
+        document.getElementById("demo2").innerHTML = frutas.join(" * ");
+    </script>
+
+    <h3>pop()</h3>
+
+    <p> El método pop () elimina el último elemento de un array:</p>
+
+    <p id="demo3"></p>
+
+    <script>
+        var frutas = ["Banana", "Naranja", "Manzana", "Uva"];
+        frutas.pop();
+        document.getElementById("demo3").innerHTML = frutas;
+    </script>
+
+    <h3>push()</h3>
+
+    <p> El método push () agrega un nuevo elemento en el array:</p>
+
+    <p id="demo4"></p>
+
+    <script>
+        var frutas = ["Banana", "Naranja", "Manzana", "Uva"];
+        frutas.push("Mandarina");
+        document.getElementById("demo4").innerHTML = frutas;
+    </script>
+
+    <h3>shift()</h3>
+
+    <p> El método shift () elimina el primer elemento de la matriz y "desplaza" 
+        todos los demás elementos a un índice más bajo.</p>
+
+    <p id="demo5"></p>
+
+    <script>
+        var frutas = ["Banana", "Naranja", "Manzana", "Uva"];
+        frutas.shift();
+        document.getElementById("demo5").innerHTML = frutas;
+    </script>
+
+    <h3>unshift()</h3>
+
+    <p> El método unshift () agrega un nuevo elemento a una matriz (al principio)</p>
+
+    <p id="demo6"></p>
+
+    <script>
+        var frutas = ["Banana", "Naranja", "Manzana", "Uva"];
+        frutas.unshift("kiwi");
+        document.getElementById("demo6").innerHTML = frutas;
+    </script>
+
+    <h3>delete()</h3>
+
+    <p> El método delete () El uso de eliminar puede dejar huecos sin definir en 
+        la matriz. Utilice pop () o shift () en su lugar.</p>
+
+    <p id="demo7"></p>
+
+    <script>
+        var frutas = ["Banana", "Naranja", "Manzana", "Uva"];
+        delete frutas[2];//elimina Manzana   
+        document.getElementById("demo7").innerHTML = frutas;
+    </script>
+
+    <h3>splice()</h3>
+
+    <p> 
+        El método splice () se puede utilizar para agregar nuevos elementos.
+        
+        El primer parámetro (2) define la posición en la que se deben agregar 
+        nuevos elementos .
+
+        El segundo parámetro (1) define cuántos elementos deben eliminarse .
+
+        El resto de parámetros ("Limón", "Kiwi") definen los nuevos elementos a 
+        añadir .
+
+        el metodo splice devuelve los elementos eliminados.
+    </p>
+
+    <p id="demo8"></p>
+
+    <script>
+        var frutas = ["Banana", "Naranja", "Manzana", "Uva"];
+        document.getElementById("demo8").innerHTML = "array original = " + frutas;
+        eliminados = frutas.splice(2, 1, "Limon", "Kiwi");
+        document.getElementById("demo8").innerHTML += "<br>nuevo array = " + frutas+
+        "<br> frutas eliminadas: " + eliminados;
+    </script>
+
+    <h3>concat()</h3>
+
+    <p> El método concat () concatena arrays.</p>
+
+    <p id="demo9"></p>
+
+    <script>
+        var frontend = ["HTML", "CSS", "Javascript", "Vue"];
+        var backend= ["MySQL", "Python", "Django"];
+        var fullStack = frontend.concat(backend);
+
+        document.getElementById("demo9").innerHTML = fullStack;
+    </script>
+
+    <h3>slice()</h3>
+
+    <p> El método slice () divide un array en un nuevo array.</p>
+
+    <p id="demo10"></p>
+    <p id="demo10bis"></p>
+
+    <script>
+        var frutas = ["Banana", "Naranja", "Manzana", "Uva", "Limon", "Kiwi"];
+        var frutas2 = frutas.slice(3);//a partir del elemento 3 inclusive 
+        var frutas3 = frutas.slice(1,4);//no incluye al elemento 4
+        document.getElementById("demo10").innerHTML = frutas2;
+        document.getElementById("demo10bis").innerHTML = frutas3;
+    </script>
+
+    <h3>sort y reverse()</h3>
+
+    <p> El método sort () ordena los elmentos del array.</p>
+
+    <p id="demo11"></p>
+    <p id="demo11bis"></p>
+
+    <script>
+        var frutas = ["Banana", "Naranja", "Manzana", "Uva", "Limon", "Kiwi"];
+        
+        document.getElementById("demo11").innerHTML = frutas.sort();
+        document.getElementById("demo11bis").innerHTML = frutas.reverse();
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

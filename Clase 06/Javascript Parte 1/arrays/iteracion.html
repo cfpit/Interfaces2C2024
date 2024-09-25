@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Iteracion o Recorrida de Array</h2>
+
+    <h3>JavaScript Array.forEach()</h3>
+
+    <p> Llama a una función una vez para cada elemento de la matriz. </p>
+
+    <p id="demo"></p>
+
+    <script>
+        var txt = "";
+        var numeros = [45, 4, 9, 16, 25];
+
+        numeros.forEach(miFuncion);
+        document.getElementById("demo").innerHTML = txt;
+
+        //definicion de la funcion
+        function miFuncion(valor) 
+        {
+            txt = txt + valor + "<br>"; 
+        }
+    </script>
+
+    <h3>JavaScript Array.forEach()- variante</h3>
+
+    <p id="demo2"></p>
+
+    <script>
+        var txt = "";
+        var numeros = [45, 4, 9, 16, 25];
+
+        numeros.forEach(miFuncion2);
+        document.getElementById("demo2").innerHTML = txt;
+
+        //definicion de la funcion
+        function miFuncion2(valor,indice,numeros) 
+        {
+            txt = txt + indice + " - " + valor + "<br>"; 
+        }
+    </script>
+
+    <h3>JavaScript Array.map()</h3>
+
+    <p id="demo3"></p>
+
+    <script>
+        /*
+            El método map() crea un nuevo array realizando una función en cada 
+            elemento del array.
+
+            El método map() no ejecuta la función para elementos de array sin 
+            valores.
+
+            El método map() no cambia el array original.
+
+            Este ejemplo multiplica cada valor de array por 2:
+        */
+        
+        var numeros1 = [45, 4, 9, 16, 25];
+        var numeros2 = numeros1.map(miFuncion);
+
+        document.getElementById("demo3").innerHTML = numeros2;
+
+        function miFuncion(value, index, array) 
+        {
+            return value * 2;
+        }
+    </script>
+
+</body>
+</html>
