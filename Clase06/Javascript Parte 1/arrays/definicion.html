@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>JavaScript Arrays</h2>
+    <!-- se utilizan para almacenar varios valores en una sola variable -->
+    
+    <h3>Ejemplo 1 - definicion array(Forma literal)</h3>
+
+    <p id="demo"></p>
+
+    <script>
+        var autos = ["Audi", "Honda", "BMW"];
+        document.getElementById("demo").innerHTML = autos;
+    </script>
+
+    <h3>Ejemplo 2 - definicion array(por palabra clave Array)</h3>
+
+    <p id="demo2"></p>
+
+    <script>
+        var autos = new Array("Audi", "Honda", "BMW");
+        document.getElementById("demo2").innerHTML = autos;
+    </script>
+
+    <h3>Ejemplo 3 - acceso a un elemento del array</h3>
+
+    <p id="demo3"></p>
+
+    <script>
+        var autos = new Array("Audi", "Honda", "BMW");
+        document.getElementById("demo3").innerHTML = autos[0];
+    </script>
+
+    <h3>Ejemplo 4 - Cambio de un elemento</h3>
+
+    <p id="demo4"></p>
+
+    <script>
+        var autos = new Array("Audi", "Honda", "BMW");
+        autos[0] = "Ford";
+        document.getElementById("demo4").innerHTML = autos[0];
+    </script>
+
+    <h3>Ejemplo 5 - array como objeto </h3>
+
+    <p id="demo5"></p>
+
+    <script>
+        var persona = {Nombre:"Juan", Apellido:"Perez", edad:30};
+        document.getElementById("demo5").innerHTML = persona["Nombre"];
+    </script>
+
+    <h3>Ejemplo 6 - longitud de array </h3>
+
+    <p id="demo6"></p>
+
+    <script>
+        var frutas = ["Banana", "Naranja", "Manzana", "Uva"];
+        document.getElementById("demo6").innerHTML = "cantidad de frutas: " + frutas.length;
+    </script>
+
+    <h3>Ejemplo 7 -  acceso al ultimo elemento del array </h3>
+
+    <p id="demo7"></p>
+
+    <script>
+        var frutas = ["Banana", "Naranja", "Manzana", "Uva"];
+        document.getElementById("demo7").innerHTML = frutas[frutas.length - 1];
+    </script>
+
+    <h3>Ejemplo 8 -  recorrer array mediante bucle for </h3>
+
+    <p id="demo8"></p>
+
+    <script>
+        var frutas = ["Banana", "Naranja", "Manzana", "Uva"];
+        var texto, fLen, i;
+
+        fLen = frutas.length;
+
+        texto = "<ul>";
+
+        for (i = 0; i < fLen; i++) 
+        {
+            texto += "<li>" + frutas[i] + "</li>";
+        }
+        
+        texto += "</ul>";
+
+        document.getElementById("demo8").innerHTML = texto;
+    </script>
+
+    <h3>Ejemplo 9 -  agregar elemento a array </h3>
+
+    <p id="demo9"></p>
+
+    <script>
+        var frutas = ["Banana", "Naranja", "Manzana", "Uva"];
+        frutas.push("Mandarina"); 
+
+        document.getElementById("demo9").innerHTML = frutas;
+    </script>
+
+    <h3>Ejemplo 10 -  array asociativo </h3>
+
+    <p id="demo10"></p>
+
+    <script>
+        var persona = [];
+        persona[0] = "Juan";
+        persona[1] = "Perez";
+        persona[2] = 30; 
+        document.getElementById("demo10").innerHTML = persona[0] + " - " + persona.length; 
+    </script>
+
+    <h3>Ejemplo 11 -  array asociativo parte 2 </h3>
+
+    <p id="demo11"></p>
+
+    <script>
+        var persona = [];
+        persona["Nombre"] = "Maria";
+        persona["Apellido"] = "Garcia";
+        persona["Edad"] = 25;
+        var x = persona.length;     // persona.length retornara 0
+        var y = persona[0]; // persona[0] retornara undefined
+        document.getElementById("demo11").innerHTML = persona[0] + " - " + persona.length; 
+    </script>
+
+
+<h3>Ejemplo 12 -  definir array vacio  </h3>
+
+<script>
+    var arreglo = new Array();// Mal
+    var arreglo2 = [];// Bien    
+
+    var arreglo3 = new Array(40, 100, 1, 5, 25, 10);//Mal
+    var arreglo4 = [40, 100, 1, 5, 25, 10];// Bien
+
+    /*
+        La palabra clave La new  solo complica el código. También puede producir 
+        algunos resultados inesperados:
+    */
+
+    // Crea un array con dos elementos (40 y 100)
+    var arreglo5 = new Array(40, 100);  
+
+    // Crea un array con 40 elementos indefinidos!
+    var arreglo6 = new Array(40);  
+
+</script>
+    
+
+    <h3>Ejemplo 13 -  reconocer un array  </h3>
+
+    <p id="demo13"></p>
+
+    <script>
+        var frutas = ["Banana", "Naranja", "Manzana", "Uva"];
+        document.getElementById("demo13").innerHTML = typeof frutas;//devuelve object
+    </script>
+
+<h3>Ejemplo 14 -  reconocer un array parte 2  </h3>
+
+<p id="demo14"></p>
+
+<script>
+    var frutas = ["Banana", "Naranja", "Manzana", "Uva"];
+    document.getElementById("demo14").innerHTML = Array.isArray(frutas);//devuelve true
+</script>
+     
+
+</body>
+</html>
