@@ -1,0 +1,60 @@
+<!-- 
+La función callback se utiliza en una solicitud (request) para manejar peticiones asincrónicas y realizar operaciones secuenciales. 
+
+Propósito de la función callback
+Manejo de operaciones asíncronas: Permite ejecutar código después de que una operación compleja (como una consulta a una API o un I/O) haya terminado.
+Cadenas de funciones: Facilita la creación de cadenas de funciones que se ejecutan una tras otra, cada una esperando al resultado de la anterior.
+Control de flujo: Permite controlar el flujo del programa basándose en el resultado de una operación anterior. 
+
+
+Este ejemplo muestra cómo funciona básicamente un callback:
+
+Definimos una función saludar que toma un nombre y una callback.
+Dentro de saludar, usamos setTimeout para simular una operación asíncrona.
+Al final de la operación, llamamos a la callback pasándole nada (usando callback()).
+En main, llamamos a saludar pasando una función como argumento.
+Esta función recibirá como parámetro no nada, sino que simplemente se ejecutará cuando se llame. 
+
+
+El orden de salida es importante:
+
+Primero se ejecuta main.
+Luego se llama a saludar.
+saludar comienza su trabajo y espera 1 segundo.
+Después de 1 segundo, imprime el saludo y ejecuta la callback.
+Finalmente, la callback completa su tarea.
+Este ejemplo ilustra cómo un callback permite ejecutar código después de que una operación haya terminado, sin bloquear el flujo principal del programa.
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function saludar(nombre, callback) {
+    setTimeout(() => {
+      console.log(`Hola, ${nombre}!`);
+      callback();
+    }, 2000); // Simula una demora de 1 segundo
+  }
+  
+  function main() {
+    console.log("Iniciando...");
+    
+    saludar("Juan", () => {
+      console.log("Callback ejecutado");
+    });
+    
+    console.log("Fin del programa");
+  }
+  
+  main();        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
+

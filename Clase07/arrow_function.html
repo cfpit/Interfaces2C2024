@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="contenido" style="color: brown;"></div>
+    <script>
+        var mensaje = () => 'Hola Mundo!!<br>';
+        var mensaje2 = (quien) => 'Hola '+quien+' !!<br>';
+
+        document.write(mensaje());
+        console.log(mensaje());
+        document.getElementById('contenido').innerHTML = mensaje2('Maria');
+    </script>
+</body>
+</html>
