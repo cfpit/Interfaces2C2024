@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejemplo de JavaScript</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <div>
+        <button id="boton1">Bariloche</button>
+        <button id="boton2">Cordoba</button>
+        <button id="boton3">Cataratas</button>
+    </div>
+    <br>
+    <img id="foto" width="50%">
+
+    
+    <script>
+        document.getElementById("boton1").addEventListener("click", () => mostrar('bariloche.jpg'));
+        document.getElementById("boton2").addEventListener("click", () => mostrar('cordoba.jpg'));
+        document.getElementById("boton3").addEventListener("click", () => mostrar('cataratas.jpg'));
+
+
+        function mostrar(lugar) {
+            fetch(lugar)
+                .then(response => response.blob())
+                .then(datos => document.getElementById("foto").setAttribute('src', URL.createObjectURL(datos)));
+        }
+
+    </script>
+</body>
+
+</html>
