@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla JSON con Axios</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container my-5 text-center">
+        <button class="btn btn-danger w-40" onclick="obtenerDatos()">Obtener</button>
+        <div class="mt-5">
+            <table class="table table-striped table-dark">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Estado</th>
+                    </tr>
+                </thead>
+                <tbody id="contenido">
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        const contenido = document.getElementById('contenido');
+
+        async function obtenerDatos() {
+            try {
+                const respuesta = await axios.get('tabla.json');
+                mostrarDatos(respuesta.data);
+            } catch (error) {
+                console.error('Error:', error.message);
+            }
+        }
+
+        function mostrarDatos(datos) {
+            contenido.innerHTML = '';
+            datos.forEach((valor, index) => {
+                contenido.insertAdjacentHTML('beforeend', `
+                    <tr>
+                        <th scope="row">${index + 1}</th>
+                        <td>${valor.nombre}</td>
+                        <td>${valor.email}</td>
+                        <td>${valor.estado ? 'Activo' : 'Eliminado'}</td>
+                    </tr>
+                `);
+            });
+        }
+    </script>
+</body>
+</html>
