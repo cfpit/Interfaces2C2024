@@ -1,0 +1,23 @@
+1) Instalación de React
+npm install -g create-react-app
+
+2) Creación del proyecto
+create-react-app proyecto1
+
+NOTA: En la terminal, si no funciona en powershell,cambiar a command prompt
+
+3) Ejecucion de la aplicacion
+cd proyecto1
+npm start
+
+
+-----------------------------------
+
+Para probar los diferentes proyectos, copiar el contenido completo de la carpeta del proyecto en el directorio raiz. Luego, modificar el archivo App.js de la carpeta src
+
+
+Nota: Para evitar problemas de bloqueos por SSL, antes de instalar dependencias con npm install, hacer:
+
+En Windows, agregamos estas variables de entorno:
+set NODE_OPTIONS=--openssl-legacy-provider
+set NODE_ENV=production 
